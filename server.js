@@ -1,33 +1,26 @@
-var express = require("express");
-// var path = require("path");
+var express = require('express');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override')
 
 var app = express();
-var PORT = process.env.PORT || 8080;
 
-//app.use (MIDDLEWARE... code that is going to run before it hits your route, hence before lines 19 and 20)
-//urlencoded (%20 > space), browser encodes it into appropriate format
-//% characters means browser has encoded it
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+var port = process.env.PORT || 8989;
 
-//converts JSON which has been converted into pockets that can be sent into air back into JSON
-//express.json passes an objects with methdso and properties, hence dot.
+app.use(express.static(process.cwd() + '/public'));
 
-//lines 13 and 15 MUCH GO BEFORE ROUTES
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
 
-//express.static is IMPORTANT when sending html code from backend, you have html routes, then you also need front end code in public folder... when you send the html and it requires other files, then you need to use express.static to send the other files along with it
-//goin
-//LINES 22 NEEDS TO GO BEFORE the routes
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'))
+var exphbs = require('express-handlebars');
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main',
+}));
+app.set('view engine', 'handlebars');
 
-//requiring a function and calling the fucntion, requiring the function and passing app as an argument
-//wherever you have a require
-//require("./routes/apiRoutes.js"); is as if I take the entire function and pasting it here. It looks for module.exports
-//(app) calls the function and passing the paramter (app) and on the server we are passing the app as an argument.
+var routes = require('./controllers/burgers_controller.js');
+app.use('/', routes);
 
-// require("./routes/apiRoutes.js")(app);
-// require("./routes/htmlRoutes.js")(app);
-
-app.listen(PORT, function() {
-    console.log("App listening on PORT: http://localhost:" + PORT);
-});
+app.listen(port);
+console.log("Server listening on: http://localhost:" + port);
