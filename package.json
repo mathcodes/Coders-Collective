@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "![badge](https://img.shields.io/badge/Skill-HTML-orange) ![badge](https://img.shields.io/badge/Skill-CSS-blue) ![badge](https://img.shields.io/badge/Skill-JS-yellow) ![badge](https://img.shields.io/badge/Skill-NodeJS-green/) ![badge](https://img.shields.io/badge/Skill-Express-blue)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathcodes/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathcodes/burger/issues"
+  },
+  "homepage": "https://github.com/mathcodes/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  }
+}
