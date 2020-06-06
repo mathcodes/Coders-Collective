@@ -15,6 +15,7 @@
 			<button class="btn btn-default btn-success btn-lg" type="submit;">ADD IT!</button>
 		</form>
 	</div>
+
 	<div class="row">
 		<div class="col-md-6 col-md-offset-0">
 			<div class="panel-panel default">
@@ -22,7 +23,7 @@
 				{{#each burgers}}
 					{{#unless this.devoured}}
 					<li class="list-group-item rtc">
-						<div class="input-group">
+						
 							<p class="lead"> {{this.burger_name}} </p>
 							<div class="lists">
 								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
@@ -30,7 +31,7 @@
 									<button class="btn btn-default btn-success btn-md" type="submit">LOG IT</button>
 								</form>
 							</div>
-						</div>
+						
 					</li>
 					{{/unless}}
 				{{/each}}
