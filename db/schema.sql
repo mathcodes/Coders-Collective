@@ -1,10 +1,6 @@
-CREATE DATABASE burgers_db;
-
-USE burgers_db;
-
-CREATE TABLE burgers(
-    id INT auto_increment PRIMARY KEY,
-    burger_name VARCHAR(255),
-    devoured BOOLEAN
-);
-
+CREATE TABLE todos (
+	id INT AUTO_INCREMENT NOT NULL,
+    description VARCHAR(255),
+    createdAt TIMESTAMP NOT NULL,
+    PRIMARY KEY(id)
+    );
