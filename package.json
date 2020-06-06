@@ -1,16 +1,17 @@
 {
     "name": "burger",
     "version": "1.0.0",
-    "description": "fun app to put your favorite on the list!",
+    "description": "fun project hoping to share and find new resources for learning code!",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/mathcodes/burger.git"
     },
-    "author": "Various Hughes",
+    "author": "Jon Christie",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/mathcodes/burger/issues"
