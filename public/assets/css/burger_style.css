@@ -8,6 +8,10 @@ body {
     font-family: sans-serif;
 }
 
+.btn {
+    text-align: center;
+}
+
 .jumbotron {
     padding-top: 30px;
     background-image: URL("https://i.pinimg.com/originals/d8/25/5f/d8255f11a5e0f457697982f5943b1b77.gif");
@@ -71,6 +75,10 @@ h1 {
     background-color: black;
     color: #F1F1F1;
     text-align: left;
+}
+
+.create-update-form {
+    text-align: center;
 }
 
 ol {
