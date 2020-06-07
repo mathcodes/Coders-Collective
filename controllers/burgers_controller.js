@@ -14,7 +14,10 @@ router.get('/burgers', function(req, res) {
 
         res.render('index', hbsObject);
     });
+
 });
+
+router.delete
 
 router.post('/burgers/create', function(req, res) {
     burgers.create(['burger_name'], [req.body.b_name], function(data) {

@@ -78,6 +78,8 @@ I look forward to hearing from you! Please do not hesitate contact me with any q
      - [x] **burger_name**: a string.
      - [x] **devoured**: a boolean.
 
+
+
 - [x] Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
 
 - [x] Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
