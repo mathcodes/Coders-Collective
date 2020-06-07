@@ -17,6 +17,8 @@ body {
 .LR {
     text-align: center;
     margin: 0px 1px;
+    height: 200px;
+    width: 20px;
 }
 
 .jumbotron {

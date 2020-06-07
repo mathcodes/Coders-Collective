@@ -13,7 +13,7 @@
 				<textarea class="form-control input-lg" type="text" name="b_name" rows="3"> </textarea>
 			</div>
 
-			<button class="btn btn-default btn-success btn-lg" type="submit;">ADD IT!</button>
+			<button class="btn btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
 		</form>
 	</div>
 
@@ -32,7 +32,7 @@
 								<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="LOG ALT" width="200px" height="200px" border-radius="15px">
 								</a>
 								<input type="hidden" name="devoured" value="true">
-								<button class="LR btn btn-default btn-success btn-md" type="submit">LOG</button>
+								<button class="LR right btn btn-default btn-success btn-md" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 								</form>
 						</p>
 					</li>
@@ -53,7 +53,7 @@
 				<p class="lead">
 					<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 						<input type="hidden" name="devoured" value="false">
-						<button class="LR btn btn-default btn-success btn-md" type="submit">REPLACE</button>
+						<button class="LR right btn btn-default btn-success btn-md" type="submit"></button>
 						<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="200px" height="200px" border-radius="15px"></a>
 						
 					</form>

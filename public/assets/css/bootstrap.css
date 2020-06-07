@@ -236,8 +236,8 @@ th {
 
 @media print {
     *,
-    :after,
-    :before {
+     :after,
+     :before {
         color: #000!important;
         text-shadow: none!important;
         background: 0 0!important;
@@ -7297,6 +7297,11 @@ button.close {
     margin-top: -5px;
     border-width: 0 5px 5px;
     border-bottom-color: #000
+}
+
+.LR {
+    height: 200px;
+    width: 20px;
 }
 
 .popover {
