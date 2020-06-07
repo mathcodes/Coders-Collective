@@ -24,6 +24,12 @@ body {
     text-shadow: 3px 3px 3px black;
 }
 
+.img {
+    border-radius: 15%;
+    border-width: 5px;
+    border-color: #5cb85c;
+}
+
 
 /* h4 {
     padding: 0px 15px;
