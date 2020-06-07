@@ -23,14 +23,15 @@
 				{{#each burgers}}
 					{{#unless this.devoured}}
 					<li class="list-group-item rtc">
-														<p class="lead"><a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT LOG" width="200px" height="200px" border-radius="15px"></a>
-							<div class="lists">
-								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-									<input type="hidden" name="devoured" value="true">
-									<button class="btn btn-default btn-success btn-md" type="submit">LOG IT</button>
+						<p class="lead">
+							<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+								<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="LOG ALT" width="200px" height="200px" border-radius="15px">
+								</a>
+								<input type="hidden" name="devoured" value="false">
+								<button class="btn btn-default btn-success btn-md" type="submit">LOG</button>
 								</form>
-							</div>
 						</p>
+
 					</li>
 					{{/unless}}
 				{{/each}}
@@ -43,7 +44,7 @@
 			{{#each burgers}}
 				{{#if this.devoured}}
 				<li class="list-group-item eaten">
-														<p class="lead"><a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="200px" height="200px" border-radius="15px"></a>
+					<p class="lead">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" ><a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="200px" height="200px" border-radius="15px"></a><input type="hidden" name="devoured" value="false"><button class="btn btn-default btn-success btn-md" type="submit">REPLACE</button></form></p>
 				</li>
 				{{/if}}
