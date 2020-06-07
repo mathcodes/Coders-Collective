@@ -23,8 +23,7 @@
 				{{#each burgers}}
 					{{#unless this.devoured}}
 					<li class="list-group-item rtc">
-						
-							<p class="lead"><img src="{{this.burger_name}}" alt="alt LOG"></p>
+						<p class="lead"><img src="{{this.burger_name}}" alt="ALT LOG" width="60px" height="60px" border-radius="15px"></p>
 							<div class="lists">
 								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
 									<input type="hidden" name="devoured" value="true">
@@ -44,7 +43,7 @@
 			{{#each burgers}}
 				{{#if this.devoured}}
 				<li class="list-group-item eaten">
-							<p class="lead"><img src="`${this.burger_name}`" alt="alt" width="60px" height="60px" border-radius="15px"></p>
+														<p class="lead"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="60px" height="60px" border-radius="15px"></p>
 					<div class="lists">
 							<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 								<input type="hidden" name="devoured" value="false">
