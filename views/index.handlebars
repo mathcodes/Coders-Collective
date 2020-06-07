@@ -44,7 +44,7 @@
 			{{#each burgers}}
 				{{#if this.devoured}}
 				<li class="list-group-item eaten">
-					<p class="lead">{{this.burger_name}} </p>
+							<p class="lead"><img src="this.burger_name" alt="this.burger_name"></p>
 					<div class="lists">
 							<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 								<input type="hidden" name="devoured" value="false">
