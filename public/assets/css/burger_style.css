@@ -10,11 +10,13 @@ body {
 
 .btn {
     text-align: center;
+    height: "200px";
+    width: "20px";
 }
 
 .LR {
     text-align: center;
-    margin-left: 8%;
+    margin: 0px 1px;
 }
 
 .jumbotron {

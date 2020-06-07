@@ -52,9 +52,10 @@
 			<li class="list-group-item eaten">
 				<p class="lead">
 					<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
-						<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="200px" height="200px" border-radius="15px"></a>
 						<input type="hidden" name="devoured" value="false">
 						<button class="LR btn btn-default btn-success btn-md" type="submit">REPLACE</button>
+						<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="200px" height="200px" border-radius="15px"></a>
+						
 					</form>
 				</p>
 			</li>
