@@ -12,6 +12,10 @@ CREATE TABLE burgers (
     
 SELECT * FROM burgers;
 
+SELECT burger_name FROM burgers;
+
+DELETE FROM burgers WHERE burger_name IS NULL;
+
 INSERT INTO burgers (burger_name, devoured) VALUES ('jaws link 1', 0);
 INSERT INTO burgers (burger_name, devoured) VALUES ('jaws link 2', 0);
 INSERT INTO burgers (burger_name, devoured) VALUES ('jaws link 3', 1);
