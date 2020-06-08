@@ -105,7 +105,7 @@ sub {
 }
 
 img {
-    border: 0
+    border: 5px
 }
 
 svg:not(:root) {
@@ -120,7 +120,7 @@ hr {
     height: 0;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
-    box-sizing: content-box
+    box-sizing: content-box;
 }
 
 pre {
