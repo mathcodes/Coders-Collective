@@ -21,7 +21,7 @@ This project uses MySQL and Node.JS to create live, full stack site which allows
 
 ## Link
 
-Deployed website: https://jonsnotetaker.herokuapp.com/
+Deployed website: https://jonburger.herokuapp.com/
 
 ## Licenses  
 No licenses are associated with my portfolio at this time.
