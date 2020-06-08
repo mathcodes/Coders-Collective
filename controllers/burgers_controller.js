@@ -17,8 +17,6 @@ router.get('/burgers', function(req, res) {
 
 });
 
-router.delete
-
 router.post('/burgers/create', function(req, res) {
     burgers.create(['burger_name'], [req.body.b_name], function(data) {
         res.redirect('/burgers')
