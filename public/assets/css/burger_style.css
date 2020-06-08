@@ -86,10 +86,8 @@ h1 {
 }
 
 .boxR {
-    /* background-color: #20262e; */
     border-radius: 15px;
     padding: 5px;
-    /* padding-top: 15px; */
     width: 100px;
     height: 100px;
     fill-opacity: 50%;
@@ -108,14 +106,6 @@ h1 {
     border-radius: 16px;
 }
 
-.list-group {
-    position: relative;
-    display: block;
-    margin-bottom: -1px;
-    /* background-color: #fff; */
-    border: 1px solid #000;
-}
-
 .form-control {
     background-color: black;
     color: #F1F1F1;
@@ -129,11 +119,4 @@ h1 {
 ol {
     margin: 0;
     padding: 0;
-}
-
-.eaten,
-.rtc {
-    /* margin: 3px; */
-    /* border-radius: 50%; */
-    background-color: black;
 }

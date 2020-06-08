@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS burgers;
 
-USE nerb6r4rzr1rtn3h;
+USE xlatwf551z0gmbbv;
 
 CREATE TABLE burgers (
 	id INT AUTO_INCREMENT NOT NULL,
@@ -9,7 +9,11 @@ CREATE TABLE burgers (
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL,
     PRIMARY KEY(id)
     );
-    
+
+INSERT INTO burgers (burger_name, devoured) VALUES ('https://www.codeconquest.com/wp-content/uploads/MySQL-Cheat-Sheet-by-CodeConquestDOTcom.jpg', 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ('https://code.visualstudio.com/assets/updates/1_7/keyboard-shortcuts-pdf.png', 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ('https://www.mapsofworld.com/images-mow/world-map.jpg', 1);
+ 
 SELECT * FROM burgers;
 
 SELECT burger_name FROM burgers;
