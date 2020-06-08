@@ -19,8 +19,8 @@
 
 <br>
 
-	<div class="row">
-		<div class="col-md-4 col-md-offset-0">
+<div class="row">
+	<div class="col-md-4 col-md-offset-0">
 			<div class="panel-panel default">
 
 				<ol>
@@ -45,27 +45,27 @@
 		</div>
 	</div>
 
-	<div class="col-md-8 col-md-offset-0">
-		<div class="panel panel-default">
+	<div class="wrapper col-md-8 col-md-offset-0">
+		<container id="col1">
 
-			<ol class="list-group">
-			{{#each burgers}}
-			{{#if this.devoured}}
-			<li class="list-group-item eaten">
-				<p class="lead">
-					<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
-						<input type="hidden" name="devoured" value="false">
-						<button class="LR right btn btn-default btn-success btn-md" type="submit"><i class="fa fa-hando-left" aria-hidden="true"></i></button>
-						<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="ALT REPLACE" width="200px" height="200px" border-radius="15px"></a>
-						
-					</form>
-				</p>
-			</li>
-			{{/if}}
-			{{/each}}
-			</ol>
+			<div class="wrapper wrapper_gradient eaten">
+				{{#each burgers}}
+				{{#if this.devoured}}
+				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+					<input type="hidden" name="devoured" value="false">
+					<a href="{{this.burger_name}}" target="_blank">
+						<img src="{{this.burger_name}}" class="box" alt="ALT REPLACE" width="100px" height="100px" border-radius="15px">
+					</a>
+				</form>  
+				{{/if}}
+				{{/each}}
+			</div>
+		</container>
+            
 
-		</div>
+	
+
+		
 	</div>
 
 </div>
