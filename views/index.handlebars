@@ -21,44 +21,49 @@
 
 <div class="row">
 	<div class="col-md-4 col-md-offset-0">
-			<div class="panel-panel default">
+			<container id="col1">
 
-				<ol>
+			<div class="wrapper wrapper_gradient eaten">
+				
 				{{#each burgers}}
-					{{#unless this.devoured}}
-					<li class="list-group-item rtc">
-						<p class="lead">
-							<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
-								<a href="{{this.burger_name}}" target="_blank"><img src="{{this.burger_name}}" alt="LOG ALT" width="200px" height="200px" border-radius="15px">
-								</a>
-								<input type="hidden" name="devoured" value="true">
-								<button class="LR right btn btn-default btn-success btn-md" type="submit">
-									<i class="fa fa-hando-right" aria-hidden="true"></i>
-								</button>
-								</form>
-						</p>
-					</li>
-					{{/unless}}
-				{{/each}}
-			</ol>
+				{{#if this.devoured}}
 
-		</div>
+				<div class="box">
+				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+					<input type="hidden" name="devoured" value="false">
+					<a href="{{this.burger_name}}" target="_blank">
+						<img src="{{this.burger_name}}" class="box" alt="ALT REPLACE" width="130px" height="150px" border-radius="15px">
+					</a>
+				</form>  
+				</div>
+
+				{{/if}}
+				{{/each}}
+
+			</div>
+		</container>
 	</div>
 
 	<div class="wrapper col-md-8 col-md-offset-0">
 		<container id="col1">
 
 			<div class="wrapper wrapper_gradient eaten">
+				
 				{{#each burgers}}
 				{{#if this.devoured}}
+
+				<div class="box">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="false">
 					<a href="{{this.burger_name}}" target="_blank">
 						<img src="{{this.burger_name}}" class="box" alt="ALT REPLACE" width="100px" height="100px" border-radius="15px">
 					</a>
 				</form>  
+				</div>
+
 				{{/if}}
 				{{/each}}
+
 			</div>
 		</container>
             
