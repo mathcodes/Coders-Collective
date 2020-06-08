@@ -34,6 +34,7 @@
 					<a href="{{this.burger_name}}" target="_blank">
 						<img src="{{this.burger_name}}" class="box" alt="ALT REPLACE" width="130px" height="150px" border-radius="15px">
 					</a>
+					<button class="btn btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 				</form>  
 				</div>
 
@@ -54,7 +55,9 @@
 
 				<div class="box">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+				
 					<input type="hidden" name="devoured" value="false">
+					<button class="btn btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 					<a href="{{this.burger_name}}" target="_blank">
 						<img src="{{this.burger_name}}" class="box" alt="ALT REPLACE" width="100px" height="100px" border-radius="15px">
 					</a>
