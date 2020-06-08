@@ -10,20 +10,20 @@ body {
 
 .btnT {
     text-align: center;
-    height: "60px";
-    width: "60px";
+    height: "45px";
+    width: "350px";
 }
 
 .btnL {
     text-align: center;
-    height: "200px";
-    width: "20px";
+    height: "45px";
+    width: "45px";
 }
 
 .btnR {
     text-align: center;
-    height: "200px";
-    width: "20px";
+    height: "45px";
+    width: "45px";
 }
 
 .jumbotron {
@@ -79,8 +79,8 @@ h1 {
 .boxL {
     border-radius: 15px;
     padding: 5px;
-    padding-top: 15px;
-    width: 80px;
+    /* padding-top: 15px; */
+    width: 100px;
     height: 100px;
     fill-opacity: 50%;
 }
@@ -89,9 +89,9 @@ h1 {
     /* background-color: #20262e; */
     border-radius: 15px;
     padding: 5px;
-    padding-top: 15px;
-    width: 60px;
-    height: 60px;
+    /* padding-top: 15px; */
+    width: 100px;
+    height: 100px;
     fill-opacity: 50%;
 }
 
