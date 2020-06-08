@@ -49,27 +49,22 @@
 		<container id="col1">
 
 			<div class="wrapper wrapper_gradient eaten">
-				
+				<div class="d-flex flex-wrap box"> 
 				{{#each burgers}}
 				{{#if this.devoured}}
 
-				<div class="box">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 				
-					
-					
-					
 					<input type="hidden" name="devoured" value="true">
 					<button class="btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 					<a href="{{this.burger_name}}" target="_blank">
 						<img src="{{this.burger_name}}" class="boxR" alt="ALT REPLACE">
 					</a>
-				</form>  
-				</div>
 
+				</form>  
 				{{/if}}
 				{{/each}}
-
+				</div>	
 			</div>
 		</container>
             

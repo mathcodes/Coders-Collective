@@ -16,7 +16,9 @@ function objToSql(ob) {
     for (var key in ob) {
         arr.push(key + '=' + ob[key]);
     };
-
+    console.log(key);
+    console.log(length);
+    console.log(arr.toString());
     return arr.toString();
 };
 
@@ -26,6 +28,8 @@ var orm = {
 
         connection.query(queryString, function(err, result) {
             if (err) throw err;
+            console.log(vals.length);
+            console.log(queryString);
             cb(result);
         });
     },
@@ -36,10 +40,13 @@ var orm = {
         queryString = queryString + ') ';
         queryString = queryString + 'VALUES (';
         queryString = queryString + printQuestionMarks(vals.length);
+        console.log(vals.length);
+        console.log(queryString);
         queryString = queryString + ') ';
 
         connection.query(queryString, vals, function(err, result) {
             if (err) throw err;
+            console.log(result);
             cb(result);
         });
     },
@@ -47,6 +54,7 @@ var orm = {
         var queryString = 'UPDATE ' + table;
         queryString = queryString + ' SET ';
         queryString = queryString + objToSql(objColVals);
+        console.log(objColVals);
         queryString = queryString + ' WHERE ';
         queryString = queryString + condition;
 
@@ -54,6 +62,7 @@ var orm = {
 
         connection.query(queryString, function(err, result) {
             if (err) throw err;
+            console.log(result);
             cb(result);
         });
     }
