@@ -27,10 +27,10 @@ var orm = {
         var queryString = 'SELECT * FROM ' + tableInput;
 
         connection.query(queryString, function(err, result) {
-            console.log(vals.length);
+            // console.log(vals.length);
             console.log(queryString);
             if (err) throw err;
-            console.log(vals.length);
+            // console.log(vals.length);
             console.log(queryString);
             cb(result);
         });
@@ -42,7 +42,7 @@ var orm = {
         queryString = queryString + ') ';
         queryString = queryString + 'VALUES (';
         queryString = queryString + printQuestionMarks(vals.length);
-        console.log(vals.length);
+        // console.log(vals.length);
         console.log(queryString);
         queryString = queryString + ') ';
 

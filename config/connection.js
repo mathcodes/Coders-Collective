@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         // console.log("connection.js line10");  //console.log used for testing
         host: "localhost",
         user: "root",
-        port: '3306',
+        port: '8000',
         password: "tY4ENvt@A",
         database: "burgers_db"
             // console.log("connection.js line16"); console.log("connection.js line16"); SyntaxError: Unexpected identifier   //console.log used for testing
