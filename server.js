@@ -2,8 +2,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 
+//Creates an Express application. The express() function is a top-level function exported by the express module.
 var app = express();
 
+//set port but allow others to work if port does not work
 var port = process.env.PORT || 8080;
 
 //(property) Application.use: (...handlers: RequestHandler<ParamsDictionary, any, any>[]) => Express (+4 overloads)
@@ -16,11 +18,12 @@ app.use(bodyParser.urlencoded({
 
 app.use(methodOverride('_method'))
 
-// Set Handlebars.
+// Set Handlebars. exphbs stands for express-handlebars
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
 }));
+//Assign setting to val, or return setting's value. Application.set(setting: string, val: any)
 app.set('view engine', 'handlebars');
 
 // Import routes and give the server access to them.
