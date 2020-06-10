@@ -8,22 +8,44 @@ body {
     font-family: sans-serif;
 }
 
+.box {
+    border-radius: 15px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    fill-opacity: 50%;
+}
+
+.boxL:hover,
+.boxR:hover {
+    color: black;
+    fill-opacity: 50%;
+    transition: .2s;
+    box-shadow: 4px 4px 4px 0px rgba(0, 140, 186, 0.9);
+    transform: translateZ(3);
+    opacity: 100%;
+    font-weight: bolder;
+    background-color: palevioletred;
+    border-radius: 16px;
+}
+
 .btnT {
     text-align: center;
-    height: "45px";
-    width: "350px";
+    height: 60px;
+    width: 350px;
+    margin-top: 10px;
 }
 
 .btnL {
     text-align: center;
-    height: "45px";
-    width: "45px";
+    height: 60px;
+    width: 60px;
 }
 
 .btnR {
     text-align: center;
-    height: "45px";
-    width: "45px";
+    height: 60px;
+    width: 60px;
 }
 
 .jumbotron {
@@ -37,10 +59,11 @@ body {
     text-shadow: 3px 3px 3px black;
 }
 
-.img {
-    border-radius: 15%;
-    border-width: 5px;
-    border-color: #5cb85c;
+img {
+    vertical-align: middle;
+    border-style: none;
+    height: 100px;
+    width: 100px;
 }
 
 
@@ -69,41 +92,9 @@ h1 {
 .wrapper {
     align-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
     grid-gap: 2px;
     transform: perspective(20px) translateZ(3);
-    padding-left: 4%;
-    padding-right: 2%;
-}
-
-.boxL {
-    border-radius: 15px;
-    padding: 5px;
-    /* padding-top: 15px; */
-    width: 100px;
-    height: 100px;
-    fill-opacity: 50%;
-}
-
-.boxR {
-    border-radius: 15px;
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-    fill-opacity: 50%;
-}
-
-.boxL:hover,
-.boxR:hover {
-    color: black;
-    fill-opacity: 50%;
-    transition: .2s;
-    box-shadow: 4px 4px 4px 0px rgba(0, 140, 186, 0.9);
-    transform: translateZ(3);
-    opacity: 100%;
-    font-weight: bolder;
-    background-color: #555;
-    border-radius: 16px;
 }
 
 .form-control {

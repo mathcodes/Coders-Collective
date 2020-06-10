@@ -21,7 +21,7 @@
 <br>
 
 <div class="row">
-	<div class="col-md-4 col-md-offset-0">
+	<div class="col-md-3 col-md-offset-0">
 			<container id="col1">
 					{{!-- console.log("index.handlebar5.line.25"); --}}
 			<div class="wrapper wrapper_gradient eaten">
@@ -29,7 +29,7 @@
 				{{#each burgers}}
 				{{#unless this.devoured}}
 {{!-- console.log("index.handlebar5.line.30"); --}}
-				<div class="box">
+				<div class="box boxL">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="true">
 					{{!-- console.log("index.handlebar5.line.34"); --}}
@@ -50,7 +50,7 @@
 		</container>
 	</div>
 					{{!-- console.log("index.handlebar5.line.52"); --}}
-	<div class="col-md-8 col-md-offset-0">
+	<div class="col-md-9 col-md-offset-0">
 <container id="col1">
 					{{!-- console.log("index.handlebar5.line.25"); --}}
 			<div class="wrapper wrapper_gradient eaten">
@@ -58,7 +58,7 @@
 				{{#each burgers}}
 				{{#if this.devoured}}
 {{!-- console.log("index.handlebar5.line.30"); --}}
-				<div class="box">
+				<div class="box boxR">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="false">
 					{{!-- console.log("index.handlebar5.line.34"); --}}
