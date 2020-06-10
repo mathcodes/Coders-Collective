@@ -8,14 +8,9 @@
 		<p class="lead"> What link are you providing today? </p>
 
 		<form class="create-update-form" action="burgers/create" method="POST">
-							<input type="hidden" name="devoured" value="false">
-
-					{{!-- console.log("index.handlebar5.line.11");  --}}
+			<input type="hidden" name="devoured" value="false">
 			<div class="form-group">
 				<textarea class="form-control input-lg" type="text" name="b_name" rows="3"> </textarea>
-			
-					{{!-- console.log("index.handlebar5.line.15"); --}}
-
 			<button class="btnT btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
 		</form>
 	</div>
@@ -24,23 +19,17 @@
 
 <div class="row">
 	<div class="col-md-3 col-md-offset-0">
+		Waiting Room:
 			<container id="col1">
-					{{!-- console.log("index.handlebar5.line.25"); --}}
 			<div class="wrapper wrapper_gradient eaten">
-					{{!-- console.log("index.handlebar5.line.27"); --}}
 				{{#each burgers}}
 				{{#unless this.devoured}}
-{{!-- console.log("index.handlebar5.line.30"); --}}
 				<div class="box boxL">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="true">
-					{{!-- console.log("index.handlebar5.line.34"); --}}
 					<a href="{{this.burger_name}}" target="_blank">
-						{{!-- console.log("index.handlebar5.line.36"); --}}
 						<img src="{{this.burger_name}}" class="boxL" alt="no img">
-						{{!-- console.log("index.handlebar5.line.38"); --}}
 					</a>
-					{{!-- console.log("index.handlebar5.line.40"); --}}
 					<button class="btn btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 				</form>  
 				</div>
@@ -51,27 +40,20 @@
 			</div>
 		</container>
 	</div>
-					{{!-- console.log("index.handlebar5.line.52"); --}}
 	<div class="col-md-9 col-md-offset-0">
+		Approved images:
 <container id="col1">
-					{{!-- console.log("index.handlebar5.line.25"); --}}
 			<div class="wrapper wrapper_gradient eaten">
-					{{!-- console.log("index.handlebar5.line.27"); --}}
 				{{#each burgers}}
 				{{#if this.devoured}}
-{{!-- console.log("index.handlebar5.line.30"); --}}
 				<div class="box boxR">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="false">
-					{{!-- console.log("index.handlebar5.line.34"); --}}
 					<a href="{{this.burger_name}}" target="_blank">
-						{{!-- console.log("index.handlebar5.line.36"); --}}
 						<img src="{{this.burger_name}}" class="boxL" alt="no img">
-						{{!-- console.log("index.handlebar5.line.38"); --}}
 					</a>
-					{{!-- console.log("index.handlebar5.line.40"); --}}
 					<button class="btn btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-				</form>  
+				</form>
 				</div>
 
 				{{/if}}
