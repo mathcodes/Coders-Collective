@@ -27,6 +27,8 @@ var orm = {
         var queryString = 'SELECT * FROM ' + tableInput;
 
         connection.query(queryString, function(err, result) {
+            console.log(vals.length);
+            console.log(queryString);
             if (err) throw err;
             console.log(vals.length);
             console.log(queryString);

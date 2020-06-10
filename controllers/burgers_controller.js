@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var burgers = require('../models/burger.js');
-
+console.log("burgers_controller line 4") //console.log used for testing
 router.get('/', function(req, res) {
     res.redirect('/burgers')
 });
-console.log(0 + 8);
+console.log("burger_controller line 8"); //console.log used for testing
 router.get('/burgers', function(req, res) {
     burgers.all(function(data) {
         var hbsObject = { burgers: data };
@@ -14,12 +14,12 @@ router.get('/burgers', function(req, res) {
 
         res.render('index', hbsObject);
     });
-    console.log("line17");
+    console.log("burger_controller line 17"); //console.log used for testing
 });
 
 router.post('/burgers/create', function(req, res) {
     burgers.create(['burger_name'], [req.body.b_name], function(data) {
-        console.log("line22");
+        console.log("burger_controller line 22"); //console.log used for testing
         console.log(this.data);
         res.redirect('/burgers')
     });
@@ -31,11 +31,11 @@ router.put('/burgers/update/:id', function(req, res) {
     console.log('condition ', condition);
 
     burgers.update({ 'devoured': req.body.devoured }, condition, function(data) {
-        console.log(this.condition);
-        console.log(3 + 5);
+        console.log(this.condition); //console.log used for testing
+        console.log(3 + 5); //console.log used for testing
         res.redirect('/burgers');
     });
 });
-console.log("line22");
-console.log(this.router);
+console.log("burger_controller line39"); //console.log used for testing
+console.log(this.router); //console.log used for testing
 module.exports = router;
