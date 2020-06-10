@@ -1,7 +1,7 @@
 <div class="container">	
 	<div class="jumbotron"> 
 		<h1>CODER'S COLLECTIVE </h1>
-		<h4 style="text-align: left;">A site for us too all share those one-side, brightly-colored, cheat-sheeting, pieces of GOLD we call information. Just paste a link to the image, pdf, doc or file of anytype into the form below and click ADD.</h4>
+		<h4 style="text-align: left;">Add to the collection of images by copying and pasting a link into the form below and clicking the button.</h4>
 	</div>
 
 	<div>
@@ -27,6 +27,35 @@
 			<div class="wrapper wrapper_gradient eaten">
 					{{!-- console.log("index.handlebar5.line.27"); --}}
 				{{#each burgers}}
+				{{#unless this.devoured}}
+{{!-- console.log("index.handlebar5.line.30"); --}}
+				<div class="box">
+				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+					<input type="hidden" name="devoured" value="true">
+					{{!-- console.log("index.handlebar5.line.34"); --}}
+					<a href="{{this.burger_name}}" target="_blank">
+						{{!-- console.log("index.handlebar5.line.36"); --}}
+						<img src="{{this.burger_name}}" class="boxL" alt="{{this.burger_name}}">
+						{{!-- console.log("index.handlebar5.line.38"); --}}
+					</a>
+					{{!-- console.log("index.handlebar5.line.40"); --}}
+					<button class="btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+				</form>  
+				</div>
+
+				{{/unless}}
+				{{/each}}
+
+			</div>
+		</container>
+	</div>
+					{{!-- console.log("index.handlebar5.line.52"); --}}
+	<div class="col-md-8 col-md-offset-0">
+<container id="col1">
+					{{!-- console.log("index.handlebar5.line.25"); --}}
+			<div class="wrapper wrapper_gradient eaten">
+					{{!-- console.log("index.handlebar5.line.27"); --}}
+				{{#each burgers}}
 				{{#if this.devoured}}
 {{!-- console.log("index.handlebar5.line.30"); --}}
 				<div class="box">
@@ -35,11 +64,11 @@
 					{{!-- console.log("index.handlebar5.line.34"); --}}
 					<a href="{{this.burger_name}}" target="_blank">
 						{{!-- console.log("index.handlebar5.line.36"); --}}
-						<img src="{{this.burger_name}}" class="boxL" alt="ALT REPLACE">
+						<img src="{{this.burger_name}}" class="boxL" alt="alt move left">
 						{{!-- console.log("index.handlebar5.line.38"); --}}
 					</a>
 					{{!-- console.log("index.handlebar5.line.40"); --}}
-					<button class="btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+					<button class="btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 				</form>  
 				</div>
 
@@ -48,37 +77,6 @@
 
 			</div>
 		</container>
-	</div>
-					{{!-- console.log("index.handlebar5.line.52"); --}}
-	<div class="wrapper col-md-8 col-md-offset-0">
-		<container id="col1">
-					{{!-- console.log("index.handlebar5.line.55"); --}}
-			<div class="wrapper wrapper_gradient eaten">
-				<div class="d-flex flex-wrap box"> 
-				{{#each burgers}}
-				{{#if this.devoured}}
-					{{!-- console.log("index.handlebar5.line.60"); --}}
-
-				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
-									{{!-- console.log("index.handlebar5.line.63"); --}}
-
-					<input type="hidden" name="devoured" value="true">
-					<button class="btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-					<a href="{{this.burger_name}}" target="_blank">
-						<img src="{{this.burger_name}}" class="boxR" alt="ALT REPLACE">
-					</a>
-
-				</form>  
-				{{/if}}
-				{{/each}}
-				</div>	
-			</div>
-		</container>
-            
-
-	
-
-		
 	</div>
 
 </div>

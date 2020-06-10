@@ -28,7 +28,7 @@ router.post('/burgers/create', function(req, res) {
 router.put('/burgers/update/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
 
-    console.log('condition ', condition);
+    console.log("burgers_controller.js", 'condition', condition);
 
     burgers.update({ 'devoured': req.body.devoured }, condition, function(data) {
         // console.log(this.condition); //console.log used for testing
