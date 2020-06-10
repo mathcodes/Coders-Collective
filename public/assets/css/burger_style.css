@@ -33,7 +33,7 @@ body {
 .btnT {
     text-align: center;
     height: 60px;
-    width: 350px;
+    width: 100%;
     margin-top: 10px;
     background-color: palevioletred;
     color: black;
@@ -41,13 +41,13 @@ body {
 
 .btnL {
     text-align: center;
-    height: 60px;
+    height: 100%;
     width: 60px;
 }
 
 .btnR {
     text-align: center;
-    height: 60px;
+    height: 100%;
     width: 60px;
 }
 
