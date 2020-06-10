@@ -25,7 +25,7 @@ body {
     transform: translateZ(3);
     opacity: 100%;
     font-weight: bolder;
-    background-color: palevioletred;
+    background-color: #0A3B5C;
     border-radius: 16px;
 }
 
@@ -34,6 +34,8 @@ body {
     height: 60px;
     width: 350px;
     margin-top: 10px;
+    background-color: palevioletred;
+    color: black;
 }
 
 .btnL {
@@ -47,6 +49,14 @@ body {
     height: 60px;
     width: 60px;
 }
+
+.btnT:hover {
+    color: #fff;
+    background-color: #0A3B5C;
+    border-color: #1e7e34;
+}
+
+.btn:hover {}
 
 .jumbotron {
     padding-top: 30px;

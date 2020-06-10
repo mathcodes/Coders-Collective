@@ -8,6 +8,8 @@
 		<p class="lead"> What link are you providing today? </p>
 
 		<form class="create-update-form" action="burgers/create" method="POST">
+							<input type="hidden" name="devoured" value="false">
+
 					{{!-- console.log("index.handlebar5.line.11");  --}}
 			<div class="form-group">
 				<textarea class="form-control input-lg" type="text" name="b_name" rows="3"> </textarea>
@@ -35,11 +37,11 @@
 					{{!-- console.log("index.handlebar5.line.34"); --}}
 					<a href="{{this.burger_name}}" target="_blank">
 						{{!-- console.log("index.handlebar5.line.36"); --}}
-						<img src="{{this.burger_name}}" class="boxL" alt="{{this.burger_name}}">
+						<img src="{{this.burger_name}}" class="boxL" alt="no img">
 						{{!-- console.log("index.handlebar5.line.38"); --}}
 					</a>
 					{{!-- console.log("index.handlebar5.line.40"); --}}
-					<button class="btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+					<button class="btn btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 				</form>  
 				</div>
 
@@ -64,11 +66,11 @@
 					{{!-- console.log("index.handlebar5.line.34"); --}}
 					<a href="{{this.burger_name}}" target="_blank">
 						{{!-- console.log("index.handlebar5.line.36"); --}}
-						<img src="{{this.burger_name}}" class="boxL" alt="alt move left">
+						<img src="{{this.burger_name}}" class="boxL" alt="no img">
 						{{!-- console.log("index.handlebar5.line.38"); --}}
 					</a>
 					{{!-- console.log("index.handlebar5.line.40"); --}}
-					<button class="btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+					<button class="btn btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 				</form>  
 				</div>
 
