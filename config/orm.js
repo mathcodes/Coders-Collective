@@ -16,9 +16,9 @@ function objToSql(ob) {
     for (var key in ob) {
         arr.push(key + '=' + ob[key]);
     };
-    console.log(key);
-    console.log(length);
-    console.log(arr.toString());
+    // console.log(key);
+    // console.log(length);
+    // console.log(arr.toString());
     return arr.toString();
 };
 
@@ -28,10 +28,10 @@ var orm = {
 
         connection.query(queryString, function(err, result) {
             // console.log(vals.length);
-            console.log(queryString);
+            // console.log(queryString);
             if (err) throw err;
             // console.log(vals.length);
-            console.log(queryString);
+            // console.log(queryString);
             cb(result);
         });
     },
@@ -43,12 +43,12 @@ var orm = {
         queryString = queryString + 'VALUES (';
         queryString = queryString + printQuestionMarks(vals.length);
         // console.log(vals.length);
-        console.log(queryString);
+        // console.log(queryString);
         queryString = queryString + ') ';
 
         connection.query(queryString, vals, function(err, result) {
             if (err) throw err;
-            console.log(result);
+            // console.log(result);
             cb(result);
         });
     },
@@ -61,11 +61,11 @@ var orm = {
         queryString = queryString + ' WHERE ';
         queryString = queryString + condition;
 
-        console.log(queryString);
+        // console.log(queryString);
 
         connection.query(queryString, function(err, result) {
             if (err) throw err;
-            console.log(result);
+            // console.log(result);
             cb(result);
         });
     }
