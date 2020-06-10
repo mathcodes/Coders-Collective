@@ -4,8 +4,10 @@ var methodOverride = require('method-override')
 
 var app = express();
 
-var port = process.env.PORT || 8989;
+var port = process.env.PORT || 8080;
 
+//(property) Application.use: (...handlers: RequestHandler<ParamsDictionary, any, any>[]) => Express (+4 overloads)
+//Create a new middleware function to serve files from within a given root directory. The file to serve will be determined by combining req.url with the provided root directory. When a file is not found, instead of sending a 404 response, this module will instead call next() to move on to the next middleware, allowing for stacking and fall-backs.
 app.use(express.static(process.cwd() + '/public'));
 
 app.use(bodyParser.urlencoded({
@@ -13,14 +15,19 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(methodOverride('_method'))
+
+// Set Handlebars.
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
 }));
 app.set('view engine', 'handlebars');
 
+// Import routes and give the server access to them.
 var routes = require('./controllers/burgers_controller.js');
-app.use('/', routes);
 
+app.use('/', routes);
+// Start our server so that it can begin listening to client requests.
 app.listen(port);
+// Log (server-side) when our server has started
 console.log("Server listening on: http://localhost:" + port);

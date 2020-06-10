@@ -10,7 +10,7 @@ router.get('/burgers', function(req, res) {
     burgers.all(function(data) {
         var hbsObject = { burgers: data };
 
-        console.log("13");
+        console.log("burger_controller line 13");
 
         res.render('index', hbsObject);
     });
@@ -19,7 +19,7 @@ router.get('/burgers', function(req, res) {
 
 router.post('/burgers/create', function(req, res) {
     burgers.create(['burger_name'], [req.body.b_name], function(data) {
-        console.log("burger_controller line 22"); //console.log used for testing
+        console.log("burgers_controller line 22"); //console.log used for testing
         console.log(this.data);
         res.redirect('/burgers')
     });
@@ -37,5 +37,6 @@ router.put('/burgers/update/:id', function(req, res) {
     });
 });
 console.log("burger_controller line39"); //console.log used for testing
-console.log(this.router); //console.log used for testing
+console.log(this.router); //console.log used for testing *undefined
+console.log(router); //console.log used for testing *undefined
 module.exports = router;
