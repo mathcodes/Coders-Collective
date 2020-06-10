@@ -26,7 +26,7 @@ connection.connect(function(err) {
         console.error("error connecting: " + err.stack);
         console.log("connection line 27"); //console.log used for testing
         return;
-        console.log("connection line 29"); //console.log used for testing
+        console.log("connection line 29"); //console.log used for testing *Unreachable code detected.ts(7027)
     }
     console.log("connection line 31"); //console.log used for testing
 });
