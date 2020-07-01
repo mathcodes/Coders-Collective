@@ -1,7 +1,7 @@
 # Coding Collective
 ## a MySQL, Node.JS, and Express deployment
 
-![HTML](https://img.shields.io/badge/Skill-HTML-orange) ![CSS](https://img.shields.io/badge/Skill-CSS-orange) ![JS](https://img.shields.io/badge/Skill-JS-orange) ![NodeJS](https://img.shields.io/badge/Skill-NodeJS-orange) 
+![HTML](https://img.shields.io/badge/Skill-HTML-orange) ![CSS](https://img.shields.io/badge/Skill-CSS-orange) ![JS](https://img.shields.io/badge/Skill-JS-orange) ![NodeJS](https://img.shields.io/badge/Skill-nodejs-orange)
 
 ![express](https://img.shields.io/badge/express-v4.15.3-blue) ![handlebars](https://img.shields.io/badge/handlebars-v3.1.0-blue) ![mysql](https://img.shields.io/badge/mysql-v2.13.0-blue)
 
