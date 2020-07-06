@@ -7,10 +7,10 @@
 	<div>
 		<p class="lead"> What link are you providing today? </p>
 
-		<form class="create-update-form" action="burgers/create" method="POST">
-			<input type="hidden" name="devoured" value="false">
+		<form class="create-update-form" action="coders/create" method="POST">
+			<input type="hidden" name="devoured" value="false" placeholder="place links that end with .png .jpeg .gif OR .svg in this box">
 			<div class="form-group">
-				<textarea class="form-control input-lg" type="text" name="b_name" rows="3"> </textarea>
+				<textarea class="form-control input-lg" type="text" name="b_name" rows="3" > </textarea>
 			<button class="btnT btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
 		</form>
 	</div>
@@ -22,13 +22,13 @@
 		Waiting Room:
 			<container id="col1">
 			<div class="wrapper wrapper_gradient eaten">
-				{{#each burgers}}
+				{{#each coders}}
 				{{#unless this.devoured}}
 				<div class="box boxL">
-				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="true">
-					<a href="{{this.burger_name}}" target="_blank">
-						<img src="{{this.burger_name}}" class="boxL" alt="no img">
+					<a href="{{this.coders_name}}" target="_blank">
+						<img src="{{this.coders_name}}" class="boxL" alt="no img">
 					</a>
 					<button class="btn btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 				</form>  
@@ -44,13 +44,13 @@
 		Approved images:
 <container id="col1">
 			<div class="wrapper wrapper_gradient eaten">
-				{{#each burgers}}
+				{{#each coders}}
 				{{#if this.devoured}}
 				<div class="box boxR">
-				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST" >
+				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="false">
-					<a href="{{this.burger_name}}" target="_blank">
-						<img src="{{this.burger_name}}" class="boxL" alt="no img">
+					<a href="{{this.coders_name}}" target="_blank">
+						<img src="{{this.coders_name}}" class="boxL" alt="no img">
 					</a>
 					<button class="btn btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 				</form>

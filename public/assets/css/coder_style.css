@@ -3,6 +3,16 @@ h2 {
     font-weight: 70px;
 }
 
+.col-md-9 {
+    border-color: #1e7e34;
+    border-left: #F1F1F1;
+    border-left-width: 5px;
+    border-width: 5px;
+    border: #0A3B5C;
+    background-color: #111111;
+    border-radius: .7%;
+}
+
 body {
     background-color: black;
     font-family: sans-serif;
@@ -11,7 +21,7 @@ body {
 
 .box {
     border-radius: 15px;
-    padding: 5px;
+    padding: 1px;
     width: auto;
     height: auto;
     fill-opacity: 50%;
@@ -103,8 +113,8 @@ h1 {
 .wrapper {
     align-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-    grid-gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 170px));
+    grid-gap: 15px;
     transform: perspective(20px) translateZ(3);
 }
 

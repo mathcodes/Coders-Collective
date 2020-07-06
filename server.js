@@ -6,7 +6,7 @@ var methodOverride = require('method-override')
 var app = express();
 
 //set port but allow others to work if port does not work
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8090;
 
 //(property) Application.use: (...handlers: RequestHandler<ParamsDictionary, any, any>[]) => Express (+4 overloads)
 //Create a new middleware function to serve files from within a given root directory. The file to serve will be determined by combining req.url with the provided root directory. When a file is not found, instead of sending a 404 response, this module will instead call next() to move on to the next middleware, allowing for stacking and fall-backs.
@@ -27,7 +27,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 // Import routes and give the server access to them.
-var routes = require('./controllers/burgers_controller.js');
+var routes = require('./controllers/coders_controller.js');
 
 app.use('/', routes);
 // Start our server so that it can begin listening to client requests.
