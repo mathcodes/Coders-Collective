@@ -10,7 +10,7 @@ var port = process.env.PORT || 8090;
 
 //(property) Application.use: (...handlers: RequestHandler<ParamsDictionary, any, any>[]) => Express (+4 overloads)
 //Create a new middleware function to serve files from within a given root directory. The file to serve will be determined by combining req.url with the provided root directory. When a file is not found, instead of sending a 404 response, this module will instead call next() to move on to the next middleware, allowing for stacking and fall-backs.
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static(process.cwd() + '/create'));
 
 app.use(bodyParser.urlencoded({
     extended: false

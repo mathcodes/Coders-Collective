@@ -1,5 +1,5 @@
 {
-    "name": "burger",
+    "name": "coder",
     "version": "1.0.0",
     "description": "fun project hoping to share and find new resources for learning code!",
     "main": "index.js",
@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mathcodes/burger.git"
+        "url": "git+https://github.com/mathcodes/coder.git"
     },
     "author": "Jon Christie",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/mathcodes/burger/issues"
+        "url": "https://github.com/mathcodes/coder/issues"
     },
-    "homepage": "https://github.com/mathcodes/burger#readme",
+    "homepage": "https://github.com/mathcodes/coder#readme",
     "dependencies": {
         "body-parser": "^1.17.2",
         "express": "^4.15.3",

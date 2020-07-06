@@ -1,5 +1,11 @@
-SELECT * FROM coders;
+DROP DATABASE IF EXISTS coders_db;
+CREATE DATABASE coders_DB;
 
-INSERT INTO coders (coder_name, devoured) VALUES ('https://www.codeconquest.com/wp-content/uploads/MySQL-Cheat-Sheet-by-CodeConquestDOTcom.jpg', 0);
-INSERT INTO coders (coder_name, devoured) VALUES ('https://code.visualstudio.com/assets/updates/1_7/keyboard-shortcuts-pdf.png', 0);
-INSERT INTO coders (coder_name, devoured) VALUES ('https://www.mapsofworld.com/images-mow/world-map.jpg', 1);
+USE coders_DB;
+
+CREATE TABLE auctions(
+  id INT NOT NULL AUTO_INCREMENT,
+  coders_name VARCHAR(100) NOT NULL,
+  devoured BOOLEAN DEFAULT TRUE,
+  PRIMARY KEY (id)
+);

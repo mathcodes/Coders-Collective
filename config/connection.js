@@ -9,8 +9,8 @@ if (process.env.JAWSDB_URL) {
         // if working locally, else statement provides parameters for connecting to local MySQL database
         host: "localhost",
         user: "root",
-        port: '8000',
-        password: "PW",
+        port: '3306',
+        password: "Momomo9!",
         database: "coders_db"
     });
 };
