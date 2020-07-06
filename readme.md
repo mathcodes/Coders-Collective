@@ -21,7 +21,7 @@ This project uses MySQL and Node.JS to create live, full stack site which allows
 
 ## Link
 
-Deployed website: https://jonburger.herokuapp.com/
+Deployed website: https://coderscollective.herokuapp.com/coders
 
 ## Licenses  
 No licenses are associated with my portfolio at this time.
@@ -49,7 +49,7 @@ I look forward to hearing from you! Please do not hesitate contact me with any q
 
 <br>
 
-- [x] Create a GitHub repo called `burger` and clone it to your computer.
+- [x] Create a GitHub repo called `coder` and clone it to your computer.
 
 - [x] Make a package.json file by running `npm init` from the command line.
 
@@ -67,20 +67,20 @@ I look forward to hearing from you! Please do not hesitate contact me with any q
 <details><summary>DB Setup</summary>
 
 <br>
-- [x] Inside your `burger` directory, create a folder named `db`.
+- [x] Inside your `coder` directory, create a folder named `db`.
 
 - [ ] In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
 
-   - [x] Create the `burgers_db`.
-   - [x] Switch to or use the `burgers_db`.
-   - [x] Create a `burgers` table with these fields:
+   - [x] Create the `coders_db`.
+   - [x] Switch to or use the `coders_db`.
+   - [x] Create a `coders` table with these fields:
      - [x] **id**: an auto incrementing int that serves as the primary key.
-     - [x] **burger_name**: a string.
+     - [x] **coder_name**: a string.
      - [x] **devoured**: a boolean.
 
 
 
-- [x] Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
+- [x] Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `coders` table with at least three entries.
 
 - [x] Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
@@ -101,7 +101,7 @@ I look forward to hearing from you! Please do not hesitate contact me with any q
 
 <br>
 
-- [x] Inside your `burger` directory, create a folder named `config`.
+- [x] Inside your `coder` directory, create a folder named `config`.
 
 - [x] Create a `connection.js` file inside `config` directory.
 
@@ -126,29 +126,29 @@ I look forward to hearing from you! Please do not hesitate contact me with any q
 
 <br>
 
-- [x] Inside your `burger` directory, create a folder named `models`.
+- [x] Inside your `coder` directory, create a folder named `models`.
 
-- [x] In `models`, make a `burger.js` file.
+- [x] In `models`, make a `coder.js` file.
 
-    - [x] Inside `burger.js`, import `orm.js` into `burger.js`
+    - [x] Inside `coder.js`, import `orm.js` into `coder.js`
 
-    - [x] Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
+    - [x] Also inside `coder.js`, create the code that will call the ORM functions using coder specific input for the ORM.
 
-    - [x] Export at the end of the `burger.js` file.
+    - [x] Export at the end of the `coder.js` file.
 </details>
 
 <details><summary>Controller setup</summary>
 
 <br>
 
-- [x] Inside your `burger` directory, create a folder named `controllers`.
+- [x] Inside your `coder` directory, create a folder named `controllers`.
 
-- [x] In `controllers`, create the `burgers_controller.js` file.
+- [x] In `controllers`, create the `coders_controller.js` file.
 
-- [x] Inside the `burgers_controller.js` file, import the following:
+- [x] Inside the `coders_controller.js` file, import the following:
 
    - [x] Express
-   - [x] `burger.js`
+   - [x] `coder.js`
 
 - [x] Create the `router` for the app, and export the `router` at the end of your file.
 </details>
@@ -157,7 +157,7 @@ I look forward to hearing from you! Please do not hesitate contact me with any q
 
 <br>
 
-- [x] Inside your `burger` directory, create a folder named `views`.
+- [x] Inside your `coder` directory, create a folder named `views`.
 
    - [x] Create the `index.handlebars` file inside `views` directory.
 
