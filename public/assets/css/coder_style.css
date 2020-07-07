@@ -51,14 +51,13 @@ body {
 
 .btnL {
     text-align: center;
-    height: 100%;
-    width: 60px;
+    height: 50%;
+    width: 40px;
 }
 
 .btnR {
     text-align: center;
     height: 100%;
-    width: 60px;
 }
 
 .btnT:hover {
@@ -66,8 +65,6 @@ body {
     background-color: #0A3B5C;
     border-color: #1e7e34;
 }
-
-.btn:hover {}
 
 .jumbotron {
     padding-top: 30px;

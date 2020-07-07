@@ -16,6 +16,11 @@ var coders = {
         orm.update("coders", objColVals, condition, function(res) {
             cb(res);
         });
+    },
+    delete: function(condition, cb) {
+        orm.delete("coders", condition, function(res) {
+            cb(res);
+        });
     }
 };
 

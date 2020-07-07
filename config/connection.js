@@ -1,10 +1,5 @@
 //setup mysql connection
 var mysql = require("mysql");
-console.log("burgers")
-console.log("burger")
-    // START
-
-
 
 var connection;
 if (process.env.JAWSDB_URL) {
@@ -18,7 +13,7 @@ if (process.env.JAWSDB_URL) {
         password: "Momomo9!",
         database: "coders_db"
     });
-    console.log(__filename, " - 21 ")
+
 };
 
 //Make connection and if there is an error, provide info using err.stack

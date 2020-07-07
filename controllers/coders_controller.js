@@ -26,23 +26,35 @@ router.post('/coders/create', function(req, res) {
         // console.log(data);
         res.redirect('/coders')
     });
-    console.log("'coder' /coders_controllers.js 38")
-    console.log("coder  /coders_controllers.js 39")
+    // console.log("'coder' /coders_controllers.js 38")
+    // console.log("coder  /coders_controllers.js 39")
 });
 
-console.log("33:" + __filename)
+
 router.put('/coders/update/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
 
-    console.log("37:" + __filename, condition)
+    // console.log("37:" + __filename, condition)
     coders.update({ 'devoured': req.body.devoured }, condition, function(data) {
         res.redirect('/coders');
-        console.log("40:" + __filename, condition)
+        // console.log("40:" + __filename, condition)
     });
 });
 // console.log("coder_controller line39"); //console.log used for testing
 // console.log(this.router); //console.log used for testing *undefined
 // console.log(router); //console.log used for testing *undefined
+router.delete('/coders/delete/:id', function(req, res) {
+    var condition = 'id = ' + req.params.id;
+
+    coders.delete(condition, function(result) {
+        if (result.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    });
+});
+
 module.exports = router;
 
-console.log("Ending:" + __filename);
+// console.log("Ending:" + __filename);

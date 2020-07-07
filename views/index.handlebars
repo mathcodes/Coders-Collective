@@ -52,14 +52,13 @@ body {
 
 .btnL {
     text-align: center;
-    height: 100%;
-    width: 60px;
+
 }
 
 .btnR {
     text-align: center;
-    height: 100%;
-    width: 60px;
+
+
 }
 
 .btnT:hover {
@@ -84,8 +83,9 @@ body {
 img {
     vertical-align: middle;
     border-style: none;
-    height: 100px;
-    width: 100px;
+   
+    width: 75px;
+    height: 75px;
 }
 
 
@@ -157,18 +157,18 @@ ol {
 
 <br>
 
-<div class="row">
-	<div class="col-md-3 col-md-offset-0">
+<div class="row justify-content-end">
+	<div class="col-md-2 col-md-offset-0">
 		Waiting Room:
 			<container id="col1">
-			<div class="wrapper wrapper_gradient eaten">
+			<div class="wrapper wrapper_gradient eaten justify-content-end">
 				{{#each coders}}
 				{{#unless this.devoured}}
 				<div class="box boxL">
 				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="true">
-					<a href="{{this.coders_name}}" target="_blank">
-						<img src="{{this.coders_name}}" class="boxL" alt="no img">
+					<a href="{{this.coder_name}}" target="_blank">
+						<img src="{{this.coder_name}}" class="boxL" alt="no img">
 					</a>
 					<button class="btn btnL btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 				</form>  
@@ -180,9 +180,9 @@ ol {
 			</div>
 		</container>
 	</div>
-	<div class="col-md-9 col-md-offset-0">
+	<div class="col-md-10 justify-content-end">
 		Approved images:
-<container id="col1">
+    <container id="col1">
 			<div class="wrapper wrapper_gradient eaten">
 				{{#each coders}}
 				{{#if this.devoured}}
@@ -190,11 +190,11 @@ ol {
 				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="false">
                     
-					<a href="{{this.coders_name}}" target="_blank">
-						<img src="{{this.coders_name}}" class="boxL" alt="no img">
+					<a href="{{this.coder_name}}" target="_blank">
+						<img src="{{this.coder_name}}" class="boxL" alt="no img">
 					</a>
 
-
+                    
 					<button class="btn btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 				</form>
 				</div>
