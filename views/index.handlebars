@@ -1,5 +1,4 @@
 <style>
-
 h2 {
     font-size: 45px;
     font-weight: 70px;
@@ -134,8 +133,10 @@ ol {
     margin: 0;
     padding: 0;
 }
-
 </style>
+
+
+
 
 <div class="container">	
 	<div class="jumbotron"> 
@@ -150,7 +151,7 @@ ol {
 			<input type="hidden" name="devoured" value="false" placeholder="place links that end with .png .jpeg .gif OR .svg in this box">
 			<div class="form-group">
 				<textarea class="form-control input-lg" type="text" name="b_name" rows="3" > </textarea>
-			<button class="btnT btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
+			<button class="btnT btn-default btn-success btn-lg" name="devoured" value="false" type="submit;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
 		</form>
 	</div>
 
@@ -188,9 +189,12 @@ ol {
 				<div class="box boxR">
 				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
 					<input type="hidden" name="devoured" value="false">
+                    
 					<a href="{{this.coders_name}}" target="_blank">
 						<img src="{{this.coders_name}}" class="boxL" alt="no img">
 					</a>
+
+
 					<button class="btn btnR btn-default btn-success btn-lg" type="submit;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 				</form>
 				</div>

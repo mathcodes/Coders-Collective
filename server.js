@@ -1,10 +1,12 @@
+console.log("Starting:" + __filename);
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 
 //Creates an Express application. The express() function is a top-level function exported by the express module.
 var app = express();
-
+console.log("9:" + __filename);
 //set port but allow others to work if port does not work
 var port = process.env.PORT || 8090;
 
@@ -34,3 +36,5 @@ app.use('/', routes);
 app.listen(port);
 // Log (server-side) when our server has started
 console.log("Server listening on: http://localhost:" + port);
+
+console.log("Ending:" + __filename);

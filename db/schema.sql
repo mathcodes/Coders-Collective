@@ -3,7 +3,7 @@ CREATE DATABASE coders_DB;
 
 USE coders_DB;
 
-CREATE TABLE auctions(
+CREATE TABLE coders(
   id INT NOT NULL AUTO_INCREMENT,
   coders_name VARCHAR(100) NOT NULL,
   devoured BOOLEAN DEFAULT TRUE,
