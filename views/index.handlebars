@@ -41,6 +41,21 @@ body {
     border-radius: 16px;
 }
 
+.btnD, .btnL, .btnR{
+	flex-wrap: wrap;
+	height: 25%;
+	width:25%;
+}
+
+.btnL{
+	color:green;
+}
+.btnR{
+	color:green;
+}
+.btnD{
+	color:darkred;
+}
 .btnT {
     text-align: center;
     height: 60px;
@@ -48,17 +63,6 @@ body {
     margin-top: 10px;
     background-color: palevioletred;
     color: black;
-}
-
-.btnL {
-    text-align: center;
-
-}
-
-.btnR {
-    text-align: center;
-
-
 }
 
 .btnT:hover {
@@ -84,8 +88,8 @@ img {
     vertical-align: middle;
     border-style: none;
    
-    width: 75px;
-    height: 75px;
+    width: 45px;
+    height: 45px;
 }
 
 
@@ -151,7 +155,7 @@ ol {
 			
                 <input type="hidden" name="devoured" value="false" placeholder="place links that end with .png .jpeg .gif OR .svg in this box">
 				<textarea class="form-control input-lg" type="text" name="b_name" rows="3" > </textarea>
-			<button class="btnT btn-default btn-success btn-lg" name="devoured" value="true" type="submit"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
+			<button class="btnT btn-default btn-success btn-lg" type="submit"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
 		</form>
 	</div>
 
@@ -163,18 +167,23 @@ ol {
 			<container id="col1">
 			<div class="wrapper wrapper_gradient eaten justify-content-end">
 				{{#each coders}}
-				{{#unless this.devoured}}
+				{{#if this.devoured}}
+				
 				<div class="box boxL">
 				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
-					<input type="hidden" name="devoured" value="true">
+
+{{!-- //value here true or false effects where content goes based on boolean value --}}
+					<input type="hidden" name="devoured" value="false">
 					<a href="{{this.coder_name}}" target="_blank">
 						<img src="{{this.coder_name}}" class="boxL" alt="no img">
 					</a>
-					<button class="btn btnL btn-default btn-success btn-lg" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+					<button class="btn btnL btn-default btn" type="submit">></button>
+					
 				</form>  
+				<button class="btn btnD btn-default btn" type="submit">X</button>
 				</div>
 
-				{{/unless}}
+				{{/if}}
 				{{/each}}
 
 			</div>
@@ -185,21 +194,25 @@ ol {
     <container id="col1">
 			<div class="wrapper wrapper_gradient eaten">
 				{{#each coders}}
-				{{#if this.devoured}}
+				{{#unless this.devoured}}
 				<div class="box boxR">
 				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
-					<input type="hidden" name="devoured" value="false">
-                    
-					<a href="{{this.coder_name}}" target="_blank">
+{{!-- //value here true or false effects where content goes based on boolean value --}}
+					<input type="hidden" name="devoured" value="true">
+            <a href="{{this.coder_name}}" target="_blank">
 						<img src="{{this.coder_name}}" class="boxL" alt="no img">
 					</a>
 
                     
-					<button class="btn btnR btn-default btn-success btn-lg" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+					<button class="btn btnR btn-default btn" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
 				</form>
+
+				<form action="coders/delete/{{this.id}}?_method=DELETE" method="PUT" >
+				<input type="hidden" name="devoured" value="true">
+				<button class="btn btnD btn-default btn" type="submit">X</button>
 				</div>
 
-				{{/if}}
+				{{/unless}}
 				{{/each}}
 
 			</div>
