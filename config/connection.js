@@ -2,8 +2,8 @@
 var mysql = require("mysql");
 
 var connection;
-if (process.env.MONGO_URI) {
-    connection = mysql.createConnection(process.env.MONGO_URI);
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
         // if working locally, else statement provides parameters for connecting to local MySQL database

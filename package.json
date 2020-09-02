@@ -1,11 +1,12 @@
 {
     "name": "coder",
     "version": "1.0.0",
+    ":homepage": ""
     "description": "fun project hoping to share and find new resources for learning code!",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server"
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "repository": {
         "type": "git",
@@ -21,6 +22,7 @@
         "body-parser": "^1.17.2",
         "express": "^4.15.3",
         "express-handlebars": "^3.1.0",
+        "gh-pages": "^3.1.0",
         "mamp": "0.0.7",
         "method-override": "^2.3.9",
         "mongodb": "^3.5.8",
