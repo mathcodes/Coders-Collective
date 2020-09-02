@@ -2,17 +2,17 @@
     "name": "coder",
     "version": "1.0.0",
     "description": "fun project hoping to share and find new resources for learning code!",
-    "main": "server.js",
+    "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mathcodes/coder.git"
+        "url": "git+https://github.com/mathcodes/coders-collective.git"
     },
     "author": "Jon Christie",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/mathcodes/coderscollective/issues"
+        "url": "https://github.com/mathcodes/coders-collective/issues"
     },
-    "homepage": "https://github.com/mathcodes/coder#readme",
+    "homepage": "https://github.com/mathcodes/coders-collective#readme",
     "dependencies": {
         "body-parser": "^1.17.2",
         "express": "^4.15.3",
