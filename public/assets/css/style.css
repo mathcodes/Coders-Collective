@@ -1,0 +1,24 @@
+*{
+    background: black;
+    color: darkgray;
+    font-family: 'Dancing Script', cursive;
+
+}
+#center-all-content{
+    text-align: center;
+}
+
+img {
+    width:160px;
+}
+
+ol{
+ list-style-position: inside;  
+ text-align: left;
+ margin-left: 30%; 
+}
+
+li{
+    padding: 3%;
+}
+

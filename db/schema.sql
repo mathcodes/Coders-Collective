@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS coders_db;
-CREATE DATABASE coders_DB;
+-- schema for burgers_bd
+CREATE DATABASE burgers_db;
+USE burgers_db;  
 
-USE coders_DB;
-
-CREATE TABLE coders(
-  id INT AUTO_INCREMENT NOT NULL,
-  coders_name VARCHAR(100) NOT NULL,
-  devoured BOOLEAN DEFAULT TRUE,
-  PRIMARY KEY (id)
+-- table burgers
+CREATE TABLE burgers(
+id INT NOT NULL AUTO_INCREMENT,
+burger_name VARCHAR(100) NOT NULL,
+devoured BOOLEAN DEFAULT false,
+PRIMARY KEY(id)
 );
