@@ -1,222 +1,45 @@
-<style>
-h2 {
-    font-size: 45px;
-    font-weight: 70px;
-}
+<div class="container-fluid" id="center-all-content">
+  <header>
+    <div class="">
+      <img src="/assets/img/burger.png" alt="burger">
+      <h1>Eat Up!</h1>
+    </div>
+  </header>
 
-.col-md-9 {
-    border-color: #1e7e34;
-    border-left: #F1F1F1;
-    border-left-width: 5px;
-    border-width: 5px;
-    border: #0A3B5C;
-    background-color: #111111;
-    border-radius: .7%;
-}
+  <div class="row ">
+    <div class="col-lg-6">
+      <h4>Ready-To-Gobble Burgers</h4>
+      <ol>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
 
-body {
-    background-color: black;
-    font-family: sans-serif;
-    color: #F1F1F1;
-}
+    <div class="col-lg-6">
+      <h4>Gobbled Burgers</h4>
+      <ol>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
 
-.box {
-    border-radius: 15px;
-    padding: 1px;
-    width: auto;
-    height: auto;
-    fill-opacity: 50%;
-}
+  </div>
 
-.boxL:hover,
-.boxR:hover {
-    color: black;
-    fill-opacity: 50%;
-    transition: .2s;
-    box-shadow: 4px 4px 4px 0px rgba(0, 140, 186, 0.9);
-    transform: translateZ(3);
-    opacity: 100%;
-    font-weight: bolder;
-    background-color: #0A3B5C;
-    border-radius: 16px;
-}
+  <div>
+    <form class="create-form">
+      <h4>Add on to the list!</h4>
+      <div class="form-group">
+        <input type="text" id="bu" name="name" placeholder="Type burger here">
+      </div>
+      <button type="submit" class="btn btn-secondary">Grille It!</button>
 
-.btnD, .btnL, .btnR{
-	flex-wrap: wrap;
-	height: 25%;
-	width:25%;
-}
-
-.btnL{
-	color:green;
-}
-.btnR{
-	color:green;
-}
-.btnD{
-	color:darkred;
-}
-.btnT {
-    text-align: center;
-    height: 60px;
-    width: 100%;
-    margin-top: 10px;
-    background-color: palevioletred;
-    color: black;
-}
-
-.btnT:hover {
-    color: #fff;
-    background-color: #0A3B5C;
-    border-color: #1e7e34;
-}
-
-.btn:hover {}
-
-.jumbotron {
-    padding-top: 30px;
-    background-image: URL("https://i.pinimg.com/originals/d8/25/5f/d8255f11a5e0f457697982f5943b1b77.gif");
-    place-content: vertical;
-    text-align: left;
-    color: white;
-    text-shadow: 10px 8px;
-    text-shadow: 6px 6px 8px black;
-    text-shadow: 3px 3px 3px black;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-   
-    width: 45px;
-    height: 45px;
-}
-
-
-/* h4 {
-    padding: 0px 15px;
-} */
-
-h1 {
-    padding-top: 0px;
-    /* background-image: URL("https://i.pinimg.com/originals/d8/25/5f/d8255f11a5e0f457697982f5943b1b77.gif"); */
-    place-content: vertical;
-    text-align: center;
-    color: white;
-    text-shadow: 10px 8px;
-    text-shadow: 6px 6px 8px black;
-    text-shadow: 3px 3px 3px black;
-}
-
-
-/* .lead,
-.row {
-    text-align: left;
-    color: #F1F1F1;
-} */
-
-.wrapper {
-    align-content: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 170px));
-    grid-gap: 15px;
-    transform: perspective(20px) translateZ(3);
-}
-
-.form-control {
-    background-color: black;
-    color: #F1F1F1;
-    text-align: left;
-}
-
-.create-update-form {
-    text-align: center;
-}
-
-ol {
-    margin: 0;
-    padding: 0;
-}
-</style>
-
-
-
-
-<div class="container">	
-	<div class="jumbotron"> 
-		<h1>CODER'S COLLECTIVE </h1>
-		<h4 style="text-align: left;">Add to the collection of images by copying and pasting the URL to an image into the form below and clicking the button. Your URL should start with 'https://' and ending with '.svg', '.png', .'gif', '.jpg', and any other image file name with extension)</h4>
-	</div>
-
-	<div>
-		<p class="lead"> What link are you providing today? </p>
-<div class="form-group">
-		<form class="create-update-form" action="coders/create" method="POST">
-			
-                <input type="hidden" name="devoured" value="false" placeholder="place links that end with .png .jpeg .gif OR .svg in this box">
-				<textarea class="form-control input-lg" type="text" name="b_name" rows="3" > </textarea>
-			<button class="btnT btn-default btn-success btn-lg" type="submit"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></div>
-		</form>
-	</div>
-
-<br>
-
-<div class="row justify-content-end">
-	<div class="col-md-2 col-md-offset-0">
-		Waiting Room:
-			<container id="col1">
-			<div class="wrapper wrapper_gradient eaten justify-content-end">
-				{{#each coders}}
-				{{#if this.devoured}}
-				
-				<div class="box boxL">
-				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
-
-{{!-- //value here true or false effects where content goes based on boolean value --}}
-					<input type="hidden" name="devoured" value="false">
-					<a href="{{this.coder_name}}" target="_blank">
-						<img src="{{this.coder_name}}" class="boxL" alt="no img">
-					</a>
-					<button class="btn btnL btn-default btn" type="submit">></button>
-					
-				</form>  
-				<button class="btn btnD btn-default btn" type="submit">X</button>
-				</div>
-
-				{{/if}}
-				{{/each}}
-
-			</div>
-		</container>
-	</div>
-	<div class="col-md-10 justify-content-end">
-		Approved images:
-    <container id="col1">
-			<div class="wrapper wrapper_gradient eaten">
-				{{#each coders}}
-				{{#unless this.devoured}}
-				<div class="box boxR">
-				<form action="coders/update/{{this.id}}?_method=PUT" method="POST" >
-{{!-- //value here true or false effects where content goes based on boolean value --}}
-					<input type="hidden" name="devoured" value="true">
-            <a href="{{this.coder_name}}" target="_blank">
-						<img src="{{this.coder_name}}" class="boxL" alt="no img">
-					</a>
-
-                    
-					<button class="btn btnR btn-default btn" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-				</form>
-
-				<form action="coders/delete/{{this.id}}?_method=DELETE" method="PUT" >
-				<input type="hidden" name="devoured" value="true">
-				<button class="btn btnD btn-default btn" type="submit">X</button>
-				</div>
-
-				{{/unless}}
-				{{/each}}
-
-			</div>
-		</container>
-	</div>
+    </form>
+  </div>
 
 </div>
